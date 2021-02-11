@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Here are people's suggestions!</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Submitter Name</th>
+                <th scope="col">Restaurant Name</th>
+                <th scope="col">Favorite Dish</th>
+                <th scope="col">Phone</th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+            @*This loops through each movie and displays it in the table*@
+            @foreach (foodApp.Models.Suggestion restaurant in Model)
+            {
+                
+            <tr scope="row">
+                <td>@restaurant.Name</td>
+                <td>@restaurant.RestName</td>
+                <td>@restaurant.FavDish</td>
+                <td>@restaurant.Phone</td>
+
+            </tr>
+                }
+
+            
+        </tbody>
+    </table>
+
+   
+</div>
